@@ -41,7 +41,7 @@ export const siteConfig: SiteConfig = {
 	// 特色页面开关配置（关闭未使用的页面有助于提升 SEO，关闭后请记得在 navbarConfig 中移除对应链接）
 	featurePages: {
 		anime: true, // 番剧页面开关
-		diary: true, // 日记页面开关
+		diary: false, // 日记页面开关
 		friends: true, // 友链页面开关
 		projects: true, // 项目页面开关
 		skills: true, // 技能页面开关
@@ -294,11 +294,11 @@ export const navBarConfig: NavBarConfig = {
 					url: "/anime/",
 					icon: "material-symbols:movie",
 				},
-				{
-					name: "Diary",
-					url: "/diary/",
-					icon: "material-symbols:book",
-				},
+//				{
+//					name: "Diary",
+//					url: "/diary/",
+//					icon: "material-symbols:book",
+//				},
 				{
 					name: "Gallery",
 					url: "/albums/",
@@ -329,33 +329,33 @@ export const navBarConfig: NavBarConfig = {
 				},
 			],
 		},
-		{
-			name: "Others",
-			url: "#",
-			icon: "material-symbols:more-horiz",
-			children: [
-				{
-					name: "Projects",
-					url: "/projects/",
-					icon: "material-symbols:work",
-				},
-				{
-					name: "Skills",
-					url: "/skills/",
-					icon: "material-symbols:psychology",
-				},
-				{
-					name: "Timeline",
-					url: "/timeline/",
-					icon: "material-symbols:timeline",
-				},
-			],
-		},
+//		{
+//			name: "Others",
+//			url: "#",
+//			icon: "material-symbols:more-horiz",
+//			children: [
+//				{
+//					name: "Projects",
+//					url: "/projects/",
+//					icon: "material-symbols:work",
+//				},
+//				{
+//					name: "Skills",
+//					url: "/skills/",
+//					icon: "material-symbols:psychology",
+//				},
+//				{
+//					name: "Timeline",
+//					url: "/timeline/",
+//					icon: "material-symbols:timeline",
+//				},
+//			],
+//		},
 	],
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "assets/images/avatar.webp", // 相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录
+	avatar: "assets/images/avatar.png", // 相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录
 	name: "BS_E",
 	bio: "懒癌晚期",
 	typewriter: {
