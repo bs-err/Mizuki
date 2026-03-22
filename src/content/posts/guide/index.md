@@ -5,7 +5,7 @@ description: "How to use this blog template."
 image: "./cover.webp"
 tags: ["Mizuki", "Blogging", "Customization"]
 category: Guides
-draft: false
+draft: true
 ---
 
 
@@ -28,12 +28,11 @@ draft: false
 
 
 
-
 | Attribute     | Description                                                                                                                                                                                                 |
-|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `title`       | The title of the post.                                                                                                                                                                                      |
 | `published`   | The date the post was published.                                                                                                                                                                            |
-| `pinned`      | Whether this post is pinned to the top of the post list.                                                                                                                                                   |
+| `pinned`      | Whether this post is pinned to the top of the post list.                                                                                                                                                    |
 | `priority`    | The priority of the pinned post. Smaller value means higher priority (0, 1, 2...).                                                                                                                          |
 | `description` | A short description of the post. Displayed on index page.                                                                                                                                                   |
 | `image`       | The cover image path of the post.<br/>1. Start with `http://` or `https://`: Use web image<br/>2. Start with `/`: For image in `public` dir<br/>3. With none of the prefixes: Relative to the markdown file |

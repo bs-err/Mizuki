@@ -24,8 +24,8 @@ import { LinkPreset } from "./types/config";
 const SITE_LANG = "zh_CN"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
 const SITE_TIMEZONE = 8; //设置你的网站时区 from -12 to 12 default in UTC+8
 export const siteConfig: SiteConfig = {
-	title: "BS_E",
-	subtitle: "BS_E's demo website",
+	title: "BS_E的主页",
+	subtitle: "建设中",
 	siteURL: "https://bserror.pages.dev/", // 请替换为你的站点URL，以斜杠结尾
 	siteStartDate: "2026-03-21", // 站点开始运行日期，用于站点统计组件计算运行天数
 
@@ -42,11 +42,11 @@ export const siteConfig: SiteConfig = {
 	featurePages: {
 		anime: true, // 番剧页面开关
 		diary: false, // 日记页面开关
-		friends: true, // 友链页面开关
-		projects: true, // 项目页面开关
-		skills: true, // 技能页面开关
-		timeline: true, // 时间线页面开关
-		albums: true, // 相册页面开关
+		friends: false, // 友链页面开关
+		projects: false, // 项目页面开关
+		skills: false, // 技能页面开关
+		timeline: false, // 时间线页面开关
+		albums: false, // 相册页面开关
 		devices: true, // 设备页面开关
 	},
 
@@ -59,7 +59,7 @@ export const siteConfig: SiteConfig = {
 		// 顶栏标题图标路径，默认使用 public/assets/home/home.png
 		icon: "assets/home/home.png",
 		// 网站Logo图片路径
-		logo: "assets/home/default-logo.png",
+		logo: "assets/home/logo.png",
 	},
 
 	// 页面自动缩放配置
@@ -69,7 +69,7 @@ export const siteConfig: SiteConfig = {
 	},
 
 	bangumi: {
-		userId: "your-bangumi-id", // 在此处设置你的Bangumi用户ID，可以设置为 "sai" 测试
+		userId: "bserror", // 在此处设置你的Bangumi用户ID，可以设置为 "sai" 测试
 		fetchOnDev: false, // 是否在开发环境下获取 Bangumi 数据（默认 false），获取前先执行 pnpm build 构建 json 文件
 	},
 
@@ -87,7 +87,7 @@ export const siteConfig: SiteConfig = {
 	},
 
 	anime: {
-		mode: "local", // 番剧页面模式："bangumi" 使用Bangumi API，"local" 使用本地配置，"bilibili" 使用Bilibili API
+		mode: "bangumi", // 番剧页面模式："bangumi" 使用Bangumi API，"local" 使用本地配置，"bilibili" 使用Bilibili API
 	},
 
 	// 文章列表布局配置
@@ -121,20 +121,14 @@ export const siteConfig: SiteConfig = {
 		// 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播
 		src: {
 			desktop: [
-				"/assets/desktop-banner/1.webp",
-				"/assets/desktop-banner/2.webp",
-				"/assets/desktop-banner/3.webp",
-				"/assets/desktop-banner/4.webp",
-				"/assets/desktop-banner/5.webp",
-				"/assets/desktop-banner/6.webp",
+				"/assets/desktop-banner/场景_花圃.png",
+				"/assets/desktop-banner/场景_始发.png",
+				"/assets/desktop-banner/场景_彼端.png",
 			], // 桌面横幅图片
 			mobile: [
-				"/assets/mobile-banner/1.webp",
-				"/assets/mobile-banner/2.webp",
-				"/assets/mobile-banner/3.webp",
-				"/assets/mobile-banner/4.webp",
-				"/assets/mobile-banner/5.webp",
-				"/assets/mobile-banner/6.webp",
+				"/assets/mobile-banner/场景_花圃.png",
+				"/assets/mobile-banner/场景_始发.png",
+				"/assets/mobile-banner/场景_彼端.png",
 			], // 移动横幅图片
 		}, // 使用本地横幅图片
 
@@ -164,9 +158,7 @@ export const siteConfig: SiteConfig = {
 			enable: true, // 在主页显示自定义文本
 			title: "BS_E's homepage", // 主页横幅主标题
 
-			subtitle: [
-				"nothing"
-			],
+			subtitle: ["lol"],
 			typewriter: {
 				enable: true, // 启用副标题打字机效果
 
@@ -234,20 +226,14 @@ export const siteConfig: SiteConfig = {
 export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 	src: {
 		desktop: [
-			"/assets/desktop-banner/1.webp",
-			"/assets/desktop-banner/2.webp",
-			"/assets/desktop-banner/3.webp",
-			"/assets/desktop-banner/4.webp",
-			"/assets/desktop-banner/5.webp",
-			"/assets/desktop-banner/6.webp",
+			"/assets/desktop-banner/场景_花圃.png",
+			"/assets/desktop-banner/场景_始发.png",
+			"/assets/desktop-banner/场景_彼端.png",
 		], // 桌面横幅图片
 		mobile: [
-			"/assets/mobile-banner/1.webp",
-			"/assets/mobile-banner/2.webp",
-			"/assets/mobile-banner/3.webp",
-			"/assets/mobile-banner/4.webp",
-			"/assets/mobile-banner/5.webp",
-			"/assets/mobile-banner/6.webp",
+			"/assets/mobile-banner/场景_花圃.png",
+			"/assets/mobile-banner/场景_始发.png",
+			"/assets/mobile-banner/场景_彼端.png",
 		], // 移动横幅图片
 	}, // 使用本地横幅图片
 	position: "center", // 壁纸位置，等同于 object-position
@@ -294,16 +280,16 @@ export const navBarConfig: NavBarConfig = {
 					url: "/anime/",
 					icon: "material-symbols:movie",
 				},
-//				{
-//					name: "Diary",
-//					url: "/diary/",
-//					icon: "material-symbols:book",
-//				},
-				{
-					name: "Gallery",
-					url: "/albums/",
-					icon: "material-symbols:photo-library",
-				},
+				//				{
+				//					name: "Diary",
+				//					url: "/diary/",
+				//					icon: "material-symbols:book",
+				//				},
+				//{
+				//	name: "Gallery",
+				//	url: "/albums/",
+				//	icon: "material-symbols:photo-library",
+				//},
 				{
 					name: "Devices",
 					url: "/devices/",
@@ -322,35 +308,35 @@ export const navBarConfig: NavBarConfig = {
 					url: "/about/",
 					icon: "material-symbols:person",
 				},
-				{
-					name: "Friends",
-					url: "/friends/",
-					icon: "material-symbols:group",
-				},
+				//{
+				//	name: "Friends",
+				//	url: "/friends/",
+				//	icon: "material-symbols:group",
+				//},
 			],
 		},
-//		{
-//			name: "Others",
-//			url: "#",
-//			icon: "material-symbols:more-horiz",
-//			children: [
-//				{
-//					name: "Projects",
-//					url: "/projects/",
-//					icon: "material-symbols:work",
-//				},
-//				{
-//					name: "Skills",
-//					url: "/skills/",
-//					icon: "material-symbols:psychology",
-//				},
-//				{
-//					name: "Timeline",
-//					url: "/timeline/",
-//					icon: "material-symbols:timeline",
-//				},
-//			],
-//		},
+		//		{
+		//			name: "Others",
+		//			url: "#",
+		//			icon: "material-symbols:more-horiz",
+		//			children: [
+		//				{
+		//					name: "Projects",
+		//					url: "/projects/",
+		//					icon: "material-symbols:work",
+		//				},
+		//				{
+		//					name: "Skills",
+		//					url: "/skills/",
+		//					icon: "material-symbols:psychology",
+		//				},
+		//				{
+		//					name: "Timeline",
+		//					url: "/timeline/",
+		//					icon: "material-symbols:timeline",
+		//				},
+		//			],
+		//		},
 	],
 };
 
@@ -434,11 +420,11 @@ export const shareConfig: ShareConfig = {
 };
 
 export const announcementConfig: AnnouncementConfig = {
-	title: "", // 公告标题，填空使用i18n字符串Key.announcement
-	content: "nothing", // 公告内容
+	title: "公告", // 公告标题，填空使用i18n字符串Key.announcement
+	content: "本站正在建设中", // 公告内容
 	closable: true, // 允许用户关闭公告
 	link: {
-		enable: true, // 启用链接
+		enable: false, // 启用链接
 		text: "Learn More", // 链接文本
 		url: "/about/", // 链接 URL
 		external: false, // 内部链接
